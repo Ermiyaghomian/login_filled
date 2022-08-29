@@ -1,0 +1,56 @@
+.input-container{
+    margin: 50px;
+    width: 280px;
+    position: relative;
+}
+.label{
+    font: 18px "Franklin Gothic Book";
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    transition: all 0.2s;
+    padding: 0 2PX;
+    z-index: 1;
+    color: #b3b3b3;
+}
+.text-input{
+    padding-left: 10px;
+    padding: 0.8ren;
+    width: 100%;
+    height: 35px;
+    border: 2px solid #2f2c45;
+    background: #272530;
+    border-radius: 5px;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.3s;
+    color: #fff;
+}
+.label::before{
+    content: "";
+    height: 5px;
+    background: #272530;
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    width: 100%;
+    z-index: -1;
+}
+.text-input:focus{
+    font-size: 14px;
+    border: 2px solid #7e4ccb;
+}
+.text-input:focus + .label,
+.filled{
+    top: -10px;
+    color: #ffffff;
+    font-size: 14px;
+}
+.text-input::placeholder{
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.text-input:focus::placeholder{
+    opacity: 1;
+}
